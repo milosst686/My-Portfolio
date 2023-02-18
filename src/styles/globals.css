@@ -25,5 +25,6 @@ html{
 
   button{
     @apply shadow-xl shadow-[#3c525c]  rounded-xl uppercase bg-gradient-to-r from-[#2c6279] to-[#486674] text-[#fe0000] 
+    cursor-pointer hover:scale-105 ease-in duration-300
   }
 }

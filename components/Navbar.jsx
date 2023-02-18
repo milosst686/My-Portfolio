@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React, {useEffect} from 'react';
+import logoImage from '../public/graphic/logo.png';
 
 export const Navbar = () => {
 
@@ -47,10 +48,10 @@ export const Navbar = () => {
   return (
     <div className={ 'flex w-full  shadow-xl  z-[100] bg-[#4a6b79]'}>
         <div className='flex justify-between items-center w-full h-full ml-20 pl-2'>
-        <Image src="/../public/graphic/logo.png" alt="/" width='100'height='100' />
+        <Image src={logoImage} alt="/" width='100'height='100' />
         </div>
         <div>
-            <button id='connect' className='w-[100px] h-[50px] mt-5 mr-28 cursor-pointer hover:scale-105 ease-in duration-300 text-sm'>Connect</button>
+            <button id='connect' className='w-[100px] h-[50px] mt-5 mr-28 text-sm'>Connect</button>
         </div>
     </div>      
   )
