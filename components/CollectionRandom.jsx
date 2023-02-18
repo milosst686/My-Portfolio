@@ -15,6 +15,7 @@ export default function CollectionRandom() {
         async function decreaseAmount () {
         number>0 ? setNumber(number-1) : setNumber(number);        
         }
+
   return (
     <div className='flex justify-center'>
         <div className="w-[350px] h-[500px] bg-slate-700 py-4   rounded-3xl mt-20">

@@ -1,10 +1,10 @@
-// SPDX-License-Identifier: UN
+// SPDX-License-Identifier: MIT
 // OpenZeppelin Contracts (last updated v4.6.0) (vendor/amb/IAMB.sol)
 pragma solidity ^0.8.0;
 
-import "contracts/token/ERC721/ERC721.sol";
-import "contracts/utils/Counters.sol";
-import "contracts/utils/math/SafeMath.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 contract FirstContract is ERC721 {
     using Counters for Counters.Counter;
