@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import React, { useState } from 'react'
 import misteryImage from '../public/graphic/Mistery.png'
+import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
 
 export default function CollectionRandom() {
 
@@ -15,6 +16,17 @@ export default function CollectionRandom() {
         async function decreaseAmount () {
         number>0 ? setNumber(number-1) : setNumber(number);        
         }
+        
+        async function createContract(){
+            const sdk = new ThirdwebSDK("goerli");
+            const contract = await sdk.getContract("0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199");
+
+            const withdrawETC = await contract.call("withdraw");
+            const sentNFT = await contract.call("mintNFT", recipient, tokenURI)
+        }
+
+
+
 
   return (
     <div className='flex justify-center'>
@@ -32,7 +44,7 @@ export default function CollectionRandom() {
                     <div >
                         <p className='text-2xl text-[#fe0000]  text-center'>TOTAL: {(0.001*number).toFixed(3)} eth</p>
                         <div className='flex justify-end'>
-                        <button className='mr-5 mt-6 rounded-3xl text-xl h-[30px] w-[80px] ' onClick={""}>MINT</button>
+                        <button className='mr-5 mt-6 rounded-3xl text-xl h-[30px] w-[80px] ' onClick={createContract}>MINT</button>
                         </div>
                     </div>
                     
